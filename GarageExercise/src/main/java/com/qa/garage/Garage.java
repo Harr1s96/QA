@@ -60,5 +60,19 @@ public class Garage {
             }
         }
     }
+
+    public void removeById(String make) {
+
+        Iterator<Vehicle> itr = myCollection.iterator();
+
+        while (itr.hasNext()) {
+
+            Vehicle v = itr.next();
+            
+            if (v.getMake() == make) {
+                itr.remove();
+            }
+        }
+    }
 }
 

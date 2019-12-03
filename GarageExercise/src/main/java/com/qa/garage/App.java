@@ -19,6 +19,7 @@ public class App
         System.out.println("The total bill for the garage is: " + myGarage.totalBill() + "\n");
         
         myGarage.removeByType(Car.class);
+        myGarage.removeById("Ducati");
         System.out.println("my garage size: " + myGarage.getSize());
         System.out.println("This is a " + myGarage.getVehicle(0).getMake());
     }

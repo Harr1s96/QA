@@ -5,26 +5,11 @@ public abstract class Vehicle {
     private int numberOfWheels;
     private String engineStroke;
     private String make;
-    //private String vehicleType;
 
     public abstract void accelerate();
 
     public abstract int calcBill();
 
-    // /**
-    //  * @param vehicleType the vehicleType to set
-    //  */
-    // public void setVehicleType(String vehicleType) {
-    //     this.vehicleType = vehicleType;
-    // }
-
-    // /**
-    //  * @return the vehicleType
-    //  */
-    // public String getVehicleType() {
-    //     return vehicleType;
-    // }
-    
     /**
      * @param numberOfWheels the numberOfWheels to set
      */

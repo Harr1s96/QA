@@ -4,6 +4,7 @@ public abstract class Item {
 
     private String checkInTime;
     private String checkOutTime;
+    private String itemName; 
 
     public Item() {
         
@@ -27,6 +28,20 @@ public abstract class Item {
      */
     public void setCheckOutTime(String checkOutTime) {
         this.checkOutTime = checkOutTime;
+    }
+
+    /**
+     * @param itemName the itemName to set
+     */
+    public void setItemName(String itemName) {
+        this.itemName = itemName;
+    }
+
+    /**
+     * @return the itemName
+     */
+    public String getItemName() {
+        return itemName;
     }
 
     /**

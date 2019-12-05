@@ -1,7 +1,12 @@
 package library;
 
 
-public class Book extends Item {
+public class Book extends Item implements Readables {
+
+    public Book() {
+
+        super();
+    }
 
     @Override
     public void checkInItem() {
@@ -15,13 +20,15 @@ public class Book extends Item {
     public void checkOutItem() {
         // TODO Auto-generated method stub
 
-        System.out.println("Book is checked out");
+        System.out.println("Book checked out");
 
     }
 
+    @Override
     public void read() {
-
+        // TODO Auto-generated method stub
         System.out.println("Reading");
+
     }
 
 

@@ -12,7 +12,7 @@ public abstract class Item {
     }
 
 
-    public abstract void checkInItem();
+    public abstract void checkInItem(String date);
 
     public abstract void checkOutItem();
 

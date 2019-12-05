@@ -18,7 +18,7 @@ public class Journal extends Item implements Readables {
     }
 
     @Override
-    public void checkInItem() {
+    public void checkInItem(String date) {
         // TODO Auto-generated method stub
 
     }
@@ -28,6 +28,5 @@ public class Journal extends Item implements Readables {
         // TODO Auto-generated method stub
 
     }
-
 
 }

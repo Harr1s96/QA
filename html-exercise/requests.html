@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="bootstrap.min.css" />
+  </head>
+  <body>
+    <div id="my-data"></div>
+    <button class="btn btn danger" onclick="getData();">Get Heroes</button>
+
+    <script>
+      function getData() {
+        axios
+          .get(
+            "https://raw.githubusercontent.com/ewomackQA/JSONDataRepo/master/example.json"
+          )
+          .then(response => {
+            console.log(response.data.members);
+            showSquad(response.data);
+            showMembers(response.data.members);
+          })
+          .catch(error => console.error(error));
+      }
+
+      const data_div = document.getElementById("my-data");
+      //accepts an array object
+      function showSquad(squad) {
+        const sName = document.createElement("h1");
+        sName.innerText = "Squad Name: " + squad.squadName;
+        data_div.appendChild(sName);
+      }
+
+      function showMembers(members) {
+        for (let i = 0; i < members.length; i++) {
+          const heroName = document.createElement("p");
+          const heroPowers = document.createElement("ul");
+          heroName.innerText = "Hero name: " + members[i].name;
+          data_div.appendChild(heroName);
+          data_div.appendChild(heroPowers);
+
+          for (let j = 0; j < members[i].powers.length; j++) {
+            const liElement = document.createElement("li");
+            liElement.innerText = "Hero Powers: " + members[i].powers[j];
+            heroPowers.appendChild(liElement);
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+
+
+*/bin/
+
+*/.vscode
+
+*/.settings
+
+*/.classpath
+
+*/.project
+
+*/target/
+
+testing/

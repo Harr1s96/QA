@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+
+    <style>
+      #plus {
+        font-size: 40px;
+      }
+
+      #minus {
+        font-size: 40px;
+      }
+
+      #multiply {
+        font-size: 40px;
+      }
+
+      #divide {
+        font-size: 40px;
+      }
+
+      /* #buttons {
+        position: absolute;
+        top: 0px;
+        left: 375px;
+      } */
+    </style>
+  </head>
+  <body>
+    <div id="calc">
+      <input type="number" id="input-1" placeholder="Number 1" />
+      <input type="number" id="input-2" placeholder="Number 2" />
+      <input type="number" name="answer" id="answer" placeholder="answer" />
+      <!-- <p id="answer"></p> -->
+
+      <div id="buttons">
+        <button id="plus" onclick="plusFunc();">+</button>
+        <button id="minus" onclick="minusFunc();">-</button>
+        <button id="multiply" onclick="multiplyFunc();">x</button>
+        <button id="divide" onclick="divsionFunc();">%</button>
+      </div>
+
+      <script src="calculator.js"></script>
+    </div>
+  </body>
+</html>
